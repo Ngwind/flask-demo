@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../flask-demo-venv"
+		}
+	],
+	"settings": {
+	}
+}
