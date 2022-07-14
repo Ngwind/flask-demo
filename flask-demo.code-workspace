@@ -5,5 +5,12 @@
 		}
 	],
 	"settings": {
+		"commentTranslate.source": "Bing",
+		"commentTranslate.multiLineMerge": true,
+		"commentTranslate.targetLanguage": "zh-CN",
+		"commentTranslate.hover.enabled": true,
+		"commentTranslate.googleTranslate.tld": "cn",
+		"editor.fontSize": 17,
+		"commentTranslate.hover.nearShow": false
 	}
 }
