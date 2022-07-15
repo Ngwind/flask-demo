@@ -11,6 +11,9 @@
 		"commentTranslate.hover.enabled": true,
 		"commentTranslate.googleTranslate.tld": "cn",
 		"editor.fontSize": 17,
-		"commentTranslate.hover.nearShow": false
+		"commentTranslate.hover.nearShow": false,
+		"python.testing.autoTestDiscoverOnSaveEnabled": false,
+		"python.analysis.autoImportCompletions": false,
+		"python.analysis.autoSearchPaths": false
 	}
 }
