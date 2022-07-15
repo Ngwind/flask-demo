@@ -55,7 +55,7 @@ def login():
             session.clear()
             session["user_id"] = user["id"]
             flash("Log in success.")
-            return redirect(url_for("hello"))
+            return redirect(url_for("blog.index"))
 
         flash(error)
 
@@ -86,6 +86,7 @@ def login_required(view):  # 一个装饰器，给其他需要登录的view函�
     @functools.wraps(view)
     def _view(**kwargs):
         if g.user is None:
+            flash("You need to log in.")
             return redirect(url_for("auth.login"))
         return view(**kwargs)
     return _view
