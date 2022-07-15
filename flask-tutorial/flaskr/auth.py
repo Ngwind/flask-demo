@@ -21,12 +21,14 @@ def register():
         if error is None:
             try:
                 sql = "INSERT INTO user (username, password) VALUES (?, ?)"
-                db.execute(sql, (username, generate_password_hash(str(password))))
+                db.execute(
+                    sql, (username, generate_password_hash(str(password))))
                 db.commit()
             except db.IntegrityError:
                 error = "User {} is already registered.".format(username)
-        else:
-            return redirect(location=url_for("auth.login"))
+            else:  # 已注册用户，重定向到登录页面
+                return redirect(location=url_for("auth.login"))
 
         flash(str(error))
+
     return render_template("auth/register.html")
